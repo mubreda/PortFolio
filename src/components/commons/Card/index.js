@@ -9,7 +9,15 @@ export function Card({
   image, title, info, url,
 }) {
   return (
-    <CardWrapper href={url} target="_blank" rel="noopener noreferrer">
+    <CardWrapper
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      width={{
+        xs: '450px',
+        xl: '300px',
+      }}
+    >
       <CardWrapper.Image
         src={image}
         alt="imagem projeto"

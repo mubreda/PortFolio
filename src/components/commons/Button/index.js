@@ -62,7 +62,7 @@ const Button = styled.button`
 
         transform: scale(1.05);
 
-        &::after{
+        &:after{
             opacity: 1;
             width: 100%;
         }

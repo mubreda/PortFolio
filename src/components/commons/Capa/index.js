@@ -15,7 +15,7 @@ export default function Capa() {
     >
       <Grid.Row
         flexWrap={{
-          sm: 'wrap',
+          xs: 'wrap',
         }}
       >
         <Grid.Col

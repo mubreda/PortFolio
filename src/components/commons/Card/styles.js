@@ -6,7 +6,7 @@ const CardWrapper = styled.a`
 display: flex;
 text-decoration:none; 
 width: 300px;
-max-height: 50vh;
+max-height: 100vh;
 box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 flex-direction: column;
 margin: 10px;

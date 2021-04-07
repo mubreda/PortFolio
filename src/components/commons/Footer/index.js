@@ -36,7 +36,7 @@ export default function Footer(props) {
         tag="p"
         color="secondary.main"
       >
-        Murilo Breda Rodrigues | 2021
+        Murilo Breda Rodrigues | 2022
         mubreda@gmail.com
       </Text>
     </FooterWrapper>
