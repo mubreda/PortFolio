@@ -12,11 +12,11 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 # 🧭 Rodando a aplicação
 ```
 # Clone este repositório
-$ git clone git@github.com:mubreda/PlataformaVerde.git
+$ git clone git@github.com:mubreda/Portfolio_Project.git
 
 
 # Acesse a pasta do projeto no seu terminal/cmd
-$ cd PlataformaVerde
+$ cd Portfolio_Project
 
 # Instale as dependências
 $ npm install
