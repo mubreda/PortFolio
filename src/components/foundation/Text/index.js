@@ -32,6 +32,7 @@ export const TextStyleVariants = {
     font-size: ${theme.typographyVariants.titleXS.fontSize};
     font-weight: ${theme.typographyVariants.titleXS.fontWeight};
     line-height: ${theme.typographyVariants.titleXS.lineHeight};
+    ${propToStyle('fontSize')};
   `}
   ${breakpointsMedia({
     md: css`
@@ -39,6 +40,7 @@ export const TextStyleVariants = {
         font-size: ${theme.typographyVariants.title.fontSize};
         font-weight: ${theme.typographyVariants.title.fontWeight};
         line-height: ${theme.typographyVariants.title.lineHeight};
+        ${propToStyle('fontSize')};
       `}
     `,
   })}
@@ -49,6 +51,10 @@ const TextBase = styled.span`
   ${({ variant }) => TextStyleVariants[variant]}
   color: ${({ theme, color }) => get(theme, `colors.${color}.color`)};
   ${propToStyle('textAlign')}
+  ${propToStyle('margin')}
+  ${propToStyle('marginLeft')}
+  ${propToStyle('marginTop')}
+  ${propToStyle('padding')}
 `;
 
 export function Text({
@@ -72,10 +78,11 @@ export function Text({
 Text.defaultProps = {
   tag: 'span',
   variant: 'paragraph1',
+  children: null,
 };
 
 Text.propTypes = {
-  children: PropTypes.node.isRequired,
-  tag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'li', 'a', 'span']),
+  children: PropTypes.node,
+  tag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'li', 'a', 'span', 'input', 'label']),
   variant: PropTypes.oneOf(['title', 'paragraph1', 'smallestException']),
 };

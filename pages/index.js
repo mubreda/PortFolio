@@ -1,11 +1,9 @@
 import React from 'react';
-import Footer from '../src/components/commons/Footer';
 import Menu from '../src/components/commons/Menu';
-import Grid from '../src/components/foundation/layout/Grid';
 import Box from '../src/components/foundation/layout/Box';
-
-import Capa from '../src/components/commons/Capa';
-import CardsSection from '../src/components/commons/CardsSection';
+import PortfolioSection from '../src/components/sections/PortfolioSection';
+import QuestionsSection from '../src/components/sections/QuestionsSection';
+import HighLightSection from '../src/components/sections/HighLightSection';
 
 export default function Home() {
   return (
@@ -15,18 +13,12 @@ export default function Home() {
       flexWrap="wrap"
       flexDirection="column"
       justifyContent="space-between"
+      backgroundColor="#E5E5E5"
     >
-      <Grid.Container
-        backgroundImage="url(/images/back.jpg)"
-        backgroundRepeat="no-repeat"
-        backgroundPosition="center"
-        backgroundSize="cover"
-      >
-        <Menu />
-        <Capa />
-      </Grid.Container>
-      <CardsSection />
-      <Footer />
+      <Menu />
+      <HighLightSection />
+      <QuestionsSection />
+      <PortfolioSection />
     </Box>
   );
 }

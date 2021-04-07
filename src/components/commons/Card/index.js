@@ -2,41 +2,49 @@
 /* eslint-disable react/prop-types */
 
 import React from 'react';
+import Grid from '../../foundation/layout/Grid';
 import { Text } from '../../foundation/Text';
+import Button from '../Button';
 import CardWrapper from './styles';
 
 export function Card({
-  image, title, info, url,
+  image, url, title, info,
 }) {
   return (
     <CardWrapper
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      width={{
-        xs: '450px',
-        xl: '300px',
-      }}
     >
       <CardWrapper.Image
         src={image}
         alt="imagem projeto"
+        borderTopLeftRadius="8px"
+        borderTopRightRadius="8px"
       />
       <CardWrapper.Footer>
         <Text
-          variant="subtitle"
-          tag="h2"
-          color="tertiary.main"
-        >
-          {title}
-        </Text>
-        <Text
           variant="paragraph2"
           tag="p"
-          color="tertiary.light"
+          color="secondary.light"
         >
           {info}
         </Text>
+        <Text
+          variant="subtitle"
+          tag="h2"
+          color="secondary.main"
+        >
+          {title}
+        </Text>
+        <Button
+          ghost
+          variant="primary.main"
+          display="block"
+          fullWidth
+        >
+          Discover all works
+        </Button>
       </CardWrapper.Footer>
     </CardWrapper>
   );
@@ -50,31 +58,51 @@ export function HLCard({
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      width="900px"
+      width="600px"
       flexDirection="row"
     >
-      <CardWrapper.Image
-        src={image}
-        alt="Imagem projeto"
-        maxWidth="60%"
-      />
+      <Grid.Col
+        value={{ xs: 3, md: 3 }}
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <CardWrapper.Image
+          src={image}
+          alt="Imagem projeto"
+          maxWidth="100%"
+        />
+      </Grid.Col>
       <CardWrapper.Footer
         alignItems="flex-start"
       >
         <Text
           variant="subtitle"
           tag="h2"
-          color="tertiary.main"
+          color="primary.main"
         >
           {title}
         </Text>
         <Text
-          variant="paragraph2"
+          variant="paragraph1"
           tag="p"
-          color="tertiary.light"
+          color="secondary.light"
         >
           {info}
         </Text>
+        <Grid.Row
+          justifyContent="flex-end"
+          width="100%"
+          paddingTop="1px"
+          paddingBottom="1px"
+        >
+          <Button
+            variant="primary.main"
+            display="block"
+          >
+            Discover all works
+          </Button>
+        </Grid.Row>
       </CardWrapper.Footer>
     </CardWrapper>
   );

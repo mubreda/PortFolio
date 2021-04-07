@@ -13,41 +13,49 @@ const Container = styled.div`
     ${propToStyle('maxWidth')}
     ${propToStyle('background')}
     ${propToStyle('backgroundImage')}
-    ${propToStyle('backgorundRepeat')}
+    ${propToStyle('backgroundRepeat')}
     ${propToStyle('backgroundPosition')}
     ${propToStyle('backgroundSize')}
     ${breakpointsMedia({
     sm: css`
-      // max-width: 576px; 
+      max-width: 576px; 
     `,
     md: css`
-      // max-width: 768px;
-      padding-right: 16px;
-      padding-left: 16px; 
+      max-width: 768px;
     `,
     lg: css`
-      // max-width: 1160px; 
+      max-width: 1160px; 
     `,
     xl: css`
-     // max-width: 1222px;
+     max-width: 1222px;
     `,
   })}
   ${propToStyle('marginTop')}
+  ${propToStyle('height')}
+  ${propToStyle('minHeight')}
 `;
 
 const Grid = {
   Container,
   Row: styled.div`
     display: flex;
-    flex-wrap: wrap-reverse;
-    margin-right: -16px;
-    margin-left: -16px;
+    flex-wrap: wrap;
     padding-top: 28px;
-    padding-bottom: 28px;
+    padding-bottom: 28px;;
+    ${propToStyle('width')}
     ${propToStyle('alignItems')}
     ${propToStyle('justifyContent')}
     ${propToStyle('flexDirection')}
     ${propToStyle('flexWrap')}
+    ${propToStyle('paddingTop')}
+    ${propToStyle('paddingBottom')}
+    ${propToStyle('marginTop')}
+    ${propToStyle('background')}
+    ${propToStyle('position')}
+    ${propToStyle('borderRadius')}
+
+
+    
   `,
   Col: styled.div`
     padding-right: 16px;
@@ -145,6 +153,11 @@ const Grid = {
     ${propToStyle('alignItems')}
     ${propToStyle('justifyContent')}
     ${propToStyle('flexDirection')}
+    ${propToStyle('paddingLeft')}
+    ${propToStyle('paddingRight')}
+    ${propToStyle('paddingBottom')}
+    ${propToStyle('marginLeft')}
+    ${propToStyle('marginRight')}
   `,
 };
 

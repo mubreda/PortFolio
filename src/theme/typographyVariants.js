@@ -3,7 +3,7 @@
 const typographyVariants = {
   // [title]
   title: {
-    fontSize: '32px',
+    fontSize: '56px',
     fontWeight: '700',
     lineHeight: 1.25, // 125%
   },
@@ -22,7 +22,7 @@ const typographyVariants = {
   paragraph1: {
     fontSize: '16px',
     fontWeight: '400',
-    lineHeight: 1.25, // 125%
+    lineHeight: 2, // 125%
   },
   // [paragraph2]
   paragraph2: {
